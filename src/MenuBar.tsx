@@ -1,16 +1,16 @@
-const MENU_ITEMS = ['About', 'Code', 'Writing', 'Teaching', 'Music', 'Contact']
+const MENU_ITEMS = ['Welcome', 'Code', 'Teaching', 'Music', 'Writing', 'Contact']
 
-function MenuBar({selected} : {selected: number}) {
+function MenuBar({selected, setSelected} : {selected: number, setSelected: (page: number) => void}) {
 
-    function MenuBarItem({title, isSelected}: {title: string, isSelected: boolean}) {
+    function MenuBarItem({title, index, isSelected, setSelected}: {title: string, index: number, isSelected: boolean, setSelected: (page: number) => void}) {
         return (
-            <button className='menu-bar-item'>{title}</button>
+            <button className='menu-bar-item' onClick={() => setSelected(index)}>{title}</button>
         )
     }    
 
     return (
         <div className='menu-bar'>        
-        {MENU_ITEMS.map((name, index) => <MenuBarItem title={name} isSelected={index === selected}></MenuBarItem>)}
+        {MENU_ITEMS.map((name, index) => <MenuBarItem title={name} index={index} isSelected={index === selected} setSelected={setSelected}></MenuBarItem>)}
         </div>
     )
 }
