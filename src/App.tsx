@@ -5,6 +5,7 @@ import Timeline from './pages/Timeline'
 import Writing from './pages/Writing'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from './components/ui/navigation-menu'
+import Music from './pages/Music'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   const tabs: {[key: string]: ReactElement}= {
     'welcome': <Welcome/>,
     'timeline': <Timeline/>,
-    'writing': <Writing/>
+    'writing': <Writing/>,
+    'music': <Music/>
   }
 
   const navHeaders = Object.entries(tabs).map(([key]) => {return (

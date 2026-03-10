@@ -20,8 +20,9 @@ export default function Welcome() {
             <br/>
             <p>
                 This portfolio is written by me and can be found <a target='_blank' href='https://github.com/idoavnon/idoavnon.github.io'>here</a>.
-                As a challenge to myself, the repository is created with 0 use of large language models – only my brain and internet searches allowed! 
-                I was inspired to do this based on the growing literature showing that AI must be used with discipline and knowledge.
+                As a challenge to myself, the repository is created without the use of large language models – only my brain and internet searches allowed! 
+                I was inspired to do this based on the <a target='_blank' href='https://arxiv.org/pdf/2601.20245'>growing literature </a> 
+                showing that using LLMs for codegen can reduce learning and must be used with discipline and skill. 
                 As a junior engineer, I still have a lot of work to build the knowledge to use codegen tools effectively!
             </p>
             <br/>
