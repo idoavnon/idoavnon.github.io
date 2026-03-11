@@ -1,4 +1,5 @@
-export default function Music() {
+export default function Music() {    
+
     return (
         <p>empty</p>
     )

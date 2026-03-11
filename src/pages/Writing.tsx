@@ -26,7 +26,7 @@ export default function Writing() {
                 <Badge variant='secondary'>{'~' + writing.time + ' minute read'}</Badge>
                 <CardAction>
                     <Button variant='outline' asChild>
-                        <a href={writing.link.href}>Download</a>
+                        <a href={writing.link.href}>Open</a>
                     </Button>
                 </CardAction>
             </CardHeader>
@@ -36,7 +36,7 @@ export default function Writing() {
         </Card>
     )})
     return (
-        <div>
+        <div className='grid grid-cols-3 gap-4'>
             {writings}
         </div>
     )

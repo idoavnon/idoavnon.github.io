@@ -15,3 +15,15 @@ export type Writing = {
     time: number
     type: 'poetry' | 'prose' | 'essay'
 }
+
+export type Video = {
+    date: Date
+    title: string
+    blurb: string
+    link: URL
+}
+
+export type HeaderLink = {
+    label: string
+    link: URL
+}

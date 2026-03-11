@@ -5,7 +5,8 @@ import Timeline from './pages/Timeline'
 import Writing from './pages/Writing'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from './components/ui/navigation-menu'
-import Music from './pages/Music'
+import { ArrowUpRight } from 'lucide-react'
+import * as constants from '@/constants'
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
     'welcome': <Welcome/>,
     'timeline': <Timeline/>,
     'writing': <Writing/>,
-    'music': <Music/>
+    //'music': <Music/> Not ready yet
+    //'contact': <Contact/>
   }
 
   const navHeaders = Object.entries(tabs).map(([key]) => {return (
@@ -25,6 +27,17 @@ function App() {
     </NavigationMenuItem>
     )})
 
+  const linkHeaders = constants.headerLinks.map((header) => {return (
+    <NavigationMenuItem key={header.label}>
+      <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+        <a target='_blank' href={header.link.href}>
+          {header.label[0].toUpperCase() + header.label.substring(1)}
+          <ArrowUpRight/>
+        </a>
+      </NavigationMenuLink>
+    </NavigationMenuItem>
+  )})
+
   const routes = Object.entries(tabs).map(([key, value]) => {return (
     <Route key={key} path={'/' + key} element={value}/>
   )})
@@ -34,6 +47,7 @@ function App() {
       <NavigationMenu className='p-5'>
         <NavigationMenuList>
           {navHeaders}
+          {linkHeaders}
         </NavigationMenuList>
       </NavigationMenu>
 
