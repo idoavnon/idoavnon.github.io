@@ -210,11 +210,11 @@ export const writings: types.Writing[] = [
 
 export const headerLinks: types.HeaderLink[] = [
     {
-        label: <img src='src/assets/linkedin.svg'/>,
+        label: <img src='/src/assets/linkedin.svg'/>,
         link: new URL('https://www.linkedin.com/in/ido-avnon/')
     },
     {
-        label: <img src='src/assets/github.svg'/>,
+        label: <img src='/src/assets/github.svg'/>,
         link: new URL('https://github.com/idoavnon')
     },
     // {
@@ -222,7 +222,7 @@ export const headerLinks: types.HeaderLink[] = [
     //     link: new URL('google.com')
     // },
     {
-        label: <img src='src/assets/gmail.svg'/>,
+        label: <img src='/src/assets/gmail.svg'/>,
         link: new URL('mailto:avnonido@gmail.com')
     }
 ]
