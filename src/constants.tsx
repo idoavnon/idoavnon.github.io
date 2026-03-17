@@ -31,7 +31,7 @@ export const timelineEvents: types.TimelineItem[]= [
             After more than 10 quarters as a teaching assistant, I get to lecture CSE 122: Introduction to Programming II, writing my own assessments and culminating project! 
         </p>,
         images: [
-            <img src='./lecture.jpeg'/>
+            <img src='./src/assets/lecture.jpeg'/>
         ],
         type: 'professional'
     },
@@ -61,7 +61,7 @@ export const timelineEvents: types.TimelineItem[]= [
             I have my first collegiate recital, playing the first four movements of Bach's Partita no. 2, Mozart Violin Sonata, and Bartok's Romanian Folk Dances 
         </p>,
         images: [
-            <img src='./recital.jpeg'/>,
+            <img src='./src/assets/recital.jpeg'/>,
         ],
         type: 'music'
     },
@@ -86,9 +86,9 @@ export const timelineEvents: types.TimelineItem[]= [
             The course, without exaggeration, changed my life, connecting me to birds and nature as a whole. Go to <a target='_blank' href='/writing'>writing</a> to see my final project!
         </p>,
         images: [
-            <img src='./eagle.jpeg'/>,
-            <img src='./ducklings.jpeg'/>,
-            <img src='./heron.jpeg'/>,
+            <img src='./src/assets/eagle.jpeg'/>,
+            <img src='./src/assets/ducklings.jpeg'/>,
+            <img src='./src/assets/heron.jpeg'/>,
         ],
         type: 'personal'
     },
@@ -235,14 +235,14 @@ export const projects: types.Project[] = [
         title: 'Facebook Friends Scraper',
         description: 'A internet scraper for getting friends info on Facebook. Uses the WXT Framework',
         link: new URL('https://github.com/idoavnon/facebook-friends-network'),
-        demo: './facebook_scraper_demo.gif',
+        demo: './src/assets/facebook_scraper_demo.gif',
         tags: ['React', 'Web Extension', 'WXT', 'Web Crawler']
     },
     {
         title: 'Social Network Visualizer',
         description: 'A D3 force-driven network visualizer. Companion to the Facebook Friends Scraper',
         link: new URL('https://github.com/idoavnon/social-media-visualizer'),
-        demo: './network_visualization.gif',
+        demo: './src/assets/network_visualization.gif',
         tags: ['Data Visualization', 'D3', 'Networks']
     }
 ]
