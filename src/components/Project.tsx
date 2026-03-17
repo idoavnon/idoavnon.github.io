@@ -54,7 +54,7 @@ export default function Project({title, tags, link, description, demo}: types.Pr
                         </div>                
                     </CollapsibleTrigger>                    
                     <CollapsibleContent className='text-wrap'>
-                        <img src={demo} alt="loading..."/>
+                        {demo}
                     </CollapsibleContent>                        
                 </Collapsible>
             </CardContent>

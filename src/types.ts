@@ -33,6 +33,6 @@ export type Project = {
     title: string
     description: string
     link: URL
-    demo: string
+    demo: ReactElement
     tags: string[]
 }

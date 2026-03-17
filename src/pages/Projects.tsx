@@ -2,8 +2,7 @@ import Project from '@/components/Project'
 import * as constants from '@/constants'
 import * as types from '@/types'
 
-export default function Projects() {    
-    import.meta.glob('@/assets/*', { eager: true, import: 'default' }) as Record<string, string>
+export default function Projects() {        
 
     const projects = constants.projects.map((project: types.Project, index) => {return (
         <Project key={index}
