@@ -1,7 +1,7 @@
 import * as types from "./types";
-import linkedin from '@/assets/linkedin.svg'
-import github from '@/assets/github.svg'
-import gmail from '@/assets/gmail.svg'
+import linkedin from './assets/linkedin.svg'
+import github from './assets/github.svg'
+import gmail from './assets/gmail.svg'
 
 
 export const timelineEvents: types.TimelineItem[]= [
