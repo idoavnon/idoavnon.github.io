@@ -4,7 +4,8 @@ export type TimelineItem = {
     date: Date
     title: ReactElement
     description: ReactElement
-    type: 'professional' | 'personal' | 'achievement'
+    images?: ReactElement[]
+    type: 'professional' | 'personal' | 'achievement' | 'music'
 }
 
 export type Writing = {
@@ -24,6 +25,14 @@ export type Video = {
 }
 
 export type HeaderLink = {
-    label: string
+    label: ReactElement
     link: URL
+}
+
+export type Project = {
+    title: string
+    description: string
+    link: URL
+    demo: string
+    tags: string[]
 }

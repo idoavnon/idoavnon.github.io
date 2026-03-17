@@ -2,11 +2,11 @@ import './App.css'
 import type { ReactElement } from 'react'
 import Welcome from './pages/Welcome'
 import Timeline from './pages/Timeline'
-import Writing from './pages/Writing'
+import Writings from './pages/Writings'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from './components/ui/navigation-menu'
-import { ArrowUpRight } from 'lucide-react'
 import * as constants from '@/constants'
+import Projects from './pages/Projects'
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
   const tabs: {[key: string]: ReactElement}= {
     'welcome': <Welcome/>,
     'timeline': <Timeline/>,
-    'writing': <Writing/>,
+    'projects': <Projects/>,
+    'writing': <Writings/>,
     //'music': <Music/> Not ready yet
     //'contact': <Contact/>
   }
@@ -27,15 +28,10 @@ function App() {
     </NavigationMenuItem>
     )})
 
-  const linkHeaders = constants.headerLinks.map((header) => {return (
-    <NavigationMenuItem key={header.label}>
-      <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-        <a target='_blank' href={header.link.href}>
-          {header.label[0].toUpperCase() + header.label.substring(1)}
-          <ArrowUpRight/>
+  const linkHeaders = constants.headerLinks.map((header, index) => {return (
+        <a target='_blank' href={header.link.href} key={index} className='flex flex-row h-5'>
+          {header.label}          
         </a>
-      </NavigationMenuLink>
-    </NavigationMenuItem>
   )})
 
   const routes = Object.entries(tabs).map(([key, value]) => {return (
@@ -44,10 +40,15 @@ function App() {
 
   return (        
     <BrowserRouter>
+      <div className='flex flex-row justify-between'>
+        <p className='text-xl font-bold'>Ido Avnon – Portfolio</p>
+        <div className='flex flex-row gap-3'>
+          {linkHeaders}
+        </div>
+      </div>
       <NavigationMenu className='p-5'>
         <NavigationMenuList>
-          {navHeaders}
-          {linkHeaders}
+          {navHeaders}          
         </NavigationMenuList>
       </NavigationMenu>
 
