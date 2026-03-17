@@ -1,4 +1,7 @@
 import * as types from "./types";
+import linkedin from '@/assets/linkedin.svg'
+import github from '@/assets/github.svg'
+import gmail from '@/assets/gmail.svg'
 
 
 export const timelineEvents: types.TimelineItem[]= [
@@ -210,11 +213,11 @@ export const writings: types.Writing[] = [
 
 export const headerLinks: types.HeaderLink[] = [
     {
-        label: <img src='./linkedin.svg'/>,
+        label: <img src={linkedin}/>,
         link: new URL('https://www.linkedin.com/in/ido-avnon/')
     },
     {
-        label: <img src='./github.svg'/>,
+        label: <img src={github}/>,
         link: new URL('https://github.com/idoavnon')
     },
     // {
@@ -222,7 +225,7 @@ export const headerLinks: types.HeaderLink[] = [
     //     link: new URL('google.com')
     // },
     {
-        label: <img src='./gmail.svg'/>,
+        label: <img src={gmail}/>,
         link: new URL('mailto:avnonido@gmail.com')
     }
 ]
