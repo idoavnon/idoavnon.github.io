@@ -29,7 +29,7 @@ function App() {
     )})
 
   const linkHeaders = constants.headerLinks.map((header, index) => {return (
-        <a target='_blank' href={header.link.href} key={index} className='flex flex-row h-5'>
+        <a target='_blank' href={header.link.href} key={index} className='flex flex-row h-10 w-10'>
           {header.label}          
         </a>
   )})
