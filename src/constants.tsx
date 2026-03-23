@@ -14,6 +14,15 @@ import network_visualization from './assets/network_visualization.gif'
 
 export const timelineEvents: types.TimelineItem[]= [
     {
+        date: new Date(2026, 1, 19),
+        title:<p>Move to SF!</p>,
+        description:
+        <p>
+            My dad and I make our way down to San Francisco from Seattle, where I live currently!
+        </p>,
+        type: 'personal'
+    },
+    {
         date: new Date(2025, 7, 29),
         title: <p>Community Jamcital!</p>,
         description:
